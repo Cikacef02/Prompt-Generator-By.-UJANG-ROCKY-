@@ -31,11 +31,10 @@ Membantu pengguna (baik pemula maupun profesional) menghasilkan prompt visual ya
 
 ## 🚀 Cara Menggunakan
 
-1. Clone atau download repository ini  
-2. Buka file `index.html` di browser  
-3. Isi form sesuai kebutuhan  
-4. Prompt akan muncul secara otomatis  
-5. Copy prompt-nya dan gunakan di AI Image Generator favoritmu!
+1. Isi form sesuai kebutuhan  
+2. Prompt akan muncul secara otomatis  
+3. Copy prompt-nya dan gunakan di AI Image
+ Generator favoritmu!
 
 ---
 
