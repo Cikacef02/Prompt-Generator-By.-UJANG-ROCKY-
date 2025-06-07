@@ -1,0 +1,193 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset dan Pengaturan Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1a2a4c);
+    color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Kontainer Aplikasi Utama */
+.app-container {
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 40px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.creator-tag {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #a0b3d1;
+    margin-top: -5px;
+}
+
+/* Layout Utama */
+.main-content {
+    display: flex;
+    gap: 40px;
+}
+
+.input-panel {
+    flex: 2;
+}
+
+.output-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Formulir & Input */
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #cdd6e3;
+}
+
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #f0f2f5;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+select option {
+    background: #1a2a4c;
+    color: #f0f2f5;
+}
+
+/* Panel Output */
+.prompt-box-wrapper {
+    flex-grow: 1;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#promptResult {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #e2e8f0;
+    text-align: left;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+/* Tombol */
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#generateBtn {
+    background-color: #007bff;
+    color: white;
+    margin-top: 20px; /* Ditaruh di bawah prompt box */
+    margin-bottom: 10px;
+}
+
+#generateBtn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+#copyBtn {
+    background-color: #343a40;
+    color: #f0f2f5;
+    border: 1px solid #6c757d;
+}
+
+#copyBtn:hover {
+    background-color: #23272b;
+    transform: translateY(-2px);
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 900px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+    .app-container {
+        padding: 20px;
+    }
+    .main-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+}
