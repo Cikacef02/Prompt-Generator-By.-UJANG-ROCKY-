@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencipta Prompt Image Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>Pencipta Prompt Image Generator</h1>
+            <p class="creator-tag">By. Ujang Rocky</p>
+        </header>
+
+        <main class="main-content">
+            <section class="input-panel">
+                <h2>📝 Deskripsi Utama</h2>
+                
+                <label for="subject">Subjek / Objek Utama</label>
+                <input type="text" id="subject" placeholder="Cth: Seorang ksatria futuristik">
+
+                <label for="details">Detail & Aksi Subjek</label>
+                <textarea id="details" placeholder="Cth: mengenakan zirah chrome, memegang pedang laser, berdiri gagah"></textarea>
+
+                <label for="background">Latar Belakang / Lingkungan</label>
+                <input type="text" id="background" placeholder="Cth: di atas gedung pencakar langit kota cyberpunk saat hujan">
+                
+                <h2>🎨 Gaya & Komposisi</h2>
+
+                <label for="style">Gaya Seni (14 Pilihan)</label>
+                <select id="style">
+                    <option value="">-- Pilih Gaya Seni --</option>
+                    <option value="photorealistic">Fotorealistis / Realistis</option>
+                    <option value="epic fantasy art">Seni Fantasi Epik</option>
+                    <option value="anime style">Gaya Anime Modern</option>
+                    <option value="studio ghibli style">Gaya Studio Ghibli</option>
+                    <option value="disney pixar style">Gaya Disney Pixar 3D</option>
+                    <option value="cyberpunk">Gaya Cyberpunk</option>
+                    <option value="steampunk">Gaya Steampunk</option>
+                    <option value="art deco">Gaya Art Deco</option>
+                    <option value="impressionist painting">Lukisan Impresionis</option>
+                    <option value="watercolor painting">Lukisan Cat Air</option>
+                    <option value="comic book style">Gaya Buku Komik</option>
+                    <option value="minimalist vector art">Seni Vektor Minimalis</option>
+                    <option value="claymation style">Gaya Claymation (Plastisin)</option>
+                    <option value="isometric 3d">Gaya 3D Isometrik</option>
+                </select>
+
+                <label for="lighting">Pencahayaan (10 Pilihan)</label>
+                <select id="lighting">
+                    <option value="">-- Pilih Pencahayaan --</option>
+                    <option value="cinematic lighting">Cahaya Sinematik</option>
+                    <option value="dramatic lighting">Cahaya Dramatis</option>
+                    <option value="golden hour">Cahaya Senja (Golden Hour)</option>
+                    <option value="blue hour">Cahaya Biru (Blue Hour)</option>
+                    <option value="neon noir lighting">Lampu Neon Gelap</option>
+                    <option value="rim lighting">Cahaya dari Belakang (Rim Light)</option>
+                    <option value="volumetric lighting">Cahaya Bervolume (Berkabut)</option>
+                    <option value="studio lighting">Lampu Studio Profesional</option>
+                    <option value="magical fantasy glow">Cahaya Fantasi Magis</option>
+                    <option value="hard shadows">Bayangan yang Tajam & Jelas</option>
+                </select>
+                
+                <label for="angle">Sudut Kamera (10 Pilihan)</label>
+                <select id="angle">
+                    <option value="">-- Pilih Sudut Kamera --</option>
+                    <option value="eye-level shot">Pandangan Sejajar Mata</option>
+                    <option value="wide angle shot">Tangkapan Lebar (Wide Shot)</option>
+                    <option value="long shot">Tangkapan Jauh (Long Shot)</option>
+                    <option value="close-up shot">Jarak Dekat (Close-up)</option>
+                    <option value="extreme close-up">Sangat Dekat (Extreme Close-up)</option>
+                    <option value="low angle shot">Dari Bawah (Low Angle)</option>
+                    <option value="high angle shot">Dari Atas (High Angle)</option>
+                    <option value="birds-eye view">Pandangan Mata Burung</option>
+                    <option value="over-the-shoulder shot">Dari Balik Bahu</option>
+                    <option value="point of view (POV)">Sudut Pandang Orang Pertama</option>
+                </select>
+                
+                <label for="params">Parameter Tambahan (Opsional)</label>
+                <input type="text" id="params" placeholder="Cth: --ar 16:9 --v 6.0 --style raw">
+            </section>
+
+            <section class="output-panel">
+                <h2>✨ Hasil Prompt Anda</h2>
+                <div class="prompt-box-wrapper">
+                    <p id="promptResult">Hasil prompt akan muncul di sini setelah Anda menekan tombol "Buat Prompt!".</p>
+                </div>
+                <button id="generateBtn">Buat Prompt!</button>
+                <button id="copyBtn">Salin Prompt</button>
+            </section>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
